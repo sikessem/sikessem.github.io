@@ -31,7 +31,6 @@ jobs:
       - name: Install, build, and upload
         uses: withastro/action@v0
         with:
-            path: .
             node-version: ${{ matrix.node-version }}
             package-manager: pnpm
 
