@@ -36,7 +36,6 @@ jobs:
         uses: withastro/action@v0
         with:
           node-version: ${{ matrix.node-version }}
-          package-manager: pnpm
 
   deploy:
     needs: build
