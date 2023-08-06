@@ -1,0 +1,47 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - 0.x
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: 
+      name: production
+      url: https://sikessem.github.io
+    strategy:
+      fail-fast: true
+      matrix:
+        operating-system: [ubuntu-latest]
+        node-version: [18.17]
+    name: 🚀 Deploy Node-${{ matrix.node-version }} on ${{ matrix.operating-system }}
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+      - name: Install, build, and upload
+        uses: withastro/action@v0
+        with:
+            path: .
+            node-version: ${{ matrix.node-version }}
+            package-manager: pnpm
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
