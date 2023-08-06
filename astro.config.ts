@@ -16,14 +16,19 @@ export default defineConfig({
 				github: 'https://github.com/sikessem',
 				twitter: 'https://twitter.com/@sikessem_tweets',
 			},
+			locales: {
+				root: {
+					label: 'English',
+					lang: 'en',
+				},
+				fr: {
+					label: 'Français',
+				},
+			},
 			sidebar: [
 				{
 					label: 'Projects',
-					items: [
-						{ label: 'Getting started', link: '/projects/' },
-						{ label: 'Starter kit', link: '/projects/starter' },
-						{ label: 'Package skeleton', link: '/projects/skeleton' },
-					],
+					autogenerate: { directory: 'projects' },
 				},
 				{
 					label: 'Packages',

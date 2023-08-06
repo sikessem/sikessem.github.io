@@ -1,3 +1,3 @@
 ---
-title: Sikessem Starter kit
+title: Starter kit
 ---
