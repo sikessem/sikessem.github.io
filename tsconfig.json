@@ -1,3 +1,8 @@
 {
-  "extends": "./node_modules/astro/tsconfigs/strict"
+  "extends": "./node_modules/astro/tsconfigs/strict",
+  "compilerOptions": {
+    "typeRoots": [
+      "types",
+    ]
+  }
 }
