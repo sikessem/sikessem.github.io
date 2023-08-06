@@ -5,6 +5,7 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
 	integrations: [
 		starlight({
+			favicon: '/favicon.ico',
 			logo: {
 				src: './src/assets//logo.svg',
 				alt: 'Sikessem',
