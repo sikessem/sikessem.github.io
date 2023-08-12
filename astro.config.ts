@@ -14,6 +14,9 @@ export default defineConfig({
         replacesTitle: true
       },
       title: 'Sikessem',
+			editLink: {
+				baseUrl: 'https://github.com/sikessem/sikessem.github.io/edit/0.x/src/content/docs/',
+			},
       social: {
         github: 'https://github.com/sikessem',
         twitter: 'https://twitter.com/@sikessem_tweets'
