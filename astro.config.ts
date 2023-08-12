@@ -32,15 +32,31 @@ export default defineConfig({
       },
       sidebar: [{
         label: 'Projects',
-        autogenerate: {
-          directory: 'projects'
-        }
-      }, {
-        label: 'Packages',
-        autogenerate: {
-          directory: 'packages'
-        }
-      }]
+          translations: {
+            fr: 'Projets',
+          },
+          autogenerate: {
+            directory: 'projects'
+          }
+        }, {
+          label: 'Packages',
+          autogenerate: {
+            directory: 'packages'
+          }
+        }, {
+          label: '👥 Contribution Guide',
+          translations: {
+            fr: '👥 Guide de Contribution',
+          },
+          link: 'contributions',
+        }, {
+          label: '🛂 Code of Conduct',
+          translations: {
+            fr: '🛂 Code de Conduite',
+          },
+          link: 'code-of-conduct',
+        },
+      ],
     }),
   ],
   // Process images with sharp: https://docs.astro.build/en/guides/assets/#using-sharp
