@@ -1,6 +1,5 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import tailwind from "@astrojs/tailwind";
 
 import alpinejs from "@astrojs/alpinejs";
 
@@ -10,7 +9,7 @@ export default defineConfig({
     starlight({
       favicon: '/favicon.ico',
       logo: {
-        src: './src/assets//logo.svg',
+        src: './src/assets/logo.svg',
         alt: 'Sikessem',
         replacesTitle: true
       },
@@ -40,11 +39,6 @@ export default defineConfig({
         }
       }]
     }),
-    tailwind({
-      configFile: './tailwind.config.ts',
-      applyBaseStyles: false
-    }),
-    alpinejs()
   ],
   // Process images with sharp: https://docs.astro.build/en/guides/assets/#using-sharp
   image: {

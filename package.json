@@ -21,12 +21,8 @@
   "dependencies": {
     "@astrojs/alpinejs": "^0.2.2",
     "@astrojs/starlight": "^0.6.1",
-    "@astrojs/tailwind": "^4.0.0",
-    "@types/alpinejs": "^3.7.2",
-    "alpinejs": "^3.12.3",
-    "astro": "^2.10.1",
-    "sharp": "^0.32.4",
-    "tailwindcss": "^3.3.3"
+    "astro": "^2.10.7",
+    "sharp": "^0.32.4"
   },
   "devDependencies": {
     "ts-node": "^10.9.1"
