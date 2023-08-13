@@ -1,70 +1,69 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-
-import alpinejs from "@astrojs/alpinejs";
+import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [
-    starlight({
-      favicon: '/favicon.ico',
-      logo: {
-        src: './src/assets/logo.svg',
-        alt: 'Sikessem',
-        replacesTitle: true
+  integrations: [starlight({
+    favicon: '/favicon.ico',
+    logo: {
+      src: './src/assets/logo.svg',
+      alt: 'Sikessem',
+      replacesTitle: true
+    },
+    title: 'Sikessem',
+    editLink: {
+      baseUrl: 'https://github.com/sikessem/sikessem.github.io/edit/0.x/src/content/docs/'
+    },
+    social: {
+      github: 'https://github.com/sikessem',
+      twitter: 'https://twitter.com/@sikessem_tweets'
+    },
+    locales: {
+      root: {
+        label: 'English',
+        lang: 'en'
       },
-      title: 'Sikessem',
-			editLink: {
-				baseUrl: 'https://github.com/sikessem/sikessem.github.io/edit/0.x/src/content/docs/',
-			},
-      social: {
-        github: 'https://github.com/sikessem',
-        twitter: 'https://twitter.com/@sikessem_tweets'
+      fr: {
+        label: 'Français'
+      }
+    },
+    sidebar: [{
+      label: 'Projects',
+      translations: {
+        fr: 'Projets'
       },
-      locales: {
-        root: {
-          label: 'English',
-          lang: 'en'
-        },
-        fr: {
-          label: 'Français'
-        }
+      autogenerate: {
+        directory: 'projects'
+      }
+    }, {
+      label: 'Packages',
+      autogenerate: {
+        directory: 'packages'
+      }
+    }, {
+      label: '🧪 Testing and Debugging',
+      translations: {
+        fr: 'Test et Débogage'
       },
-      sidebar: [{
-        label: 'Projects',
-          translations: {
-            fr: 'Projets',
-          },
-          autogenerate: {
-            directory: 'projects'
-          }
-        }, {
-          label: 'Packages',
-          autogenerate: {
-            directory: 'packages'
-          }
-        }, {
-          label: '🧪 Testing and Debugging',
-          translations: {
-            fr: 'Test et Débogage',
-          },
-          link: 'testing',
-        }, {
-          label: '👥 Contribution Guide',
-          translations: {
-            fr: '👥 Guide de Contribution',
-          },
-          link: 'contributions',
-        }, {
-          label: '🛂 Code of Conduct',
-          translations: {
-            fr: '🛂 Code de Conduite',
-          },
-          link: 'code-of-conduct',
-        },
-      ],
-    }),
-  ],
+      link: 'testing'
+    }, {
+      label: '👥 Contribution Guide',
+      translations: {
+        fr: '👥 Guide de Contribution'
+      },
+      link: 'contributions'
+    }, {
+      label: '🛂 Code of Conduct',
+      translations: {
+        fr: '🛂 Code de Conduite'
+      },
+      link: 'code-of-conduct'
+    }],
+    customCss: ['./src/designs/ui.css'],
+  }), tailwind({
+    applyBaseStyles: false,
+  })],
   // Process images with sharp: https://docs.astro.build/en/guides/assets/#using-sharp
   image: {
     service: {
