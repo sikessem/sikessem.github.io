@@ -44,6 +44,12 @@ export default defineConfig({
             directory: 'packages'
           }
         }, {
+          label: '🧪 Testing and Debugging',
+          translations: {
+            fr: 'Test et Débogage',
+          },
+          link: 'testing',
+        }, {
           label: '👥 Contribution Guide',
           translations: {
             fr: '👥 Guide de Contribution',
