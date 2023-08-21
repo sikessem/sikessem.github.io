@@ -60,7 +60,7 @@ export default defineConfig({
       },
       link: 'code-of-conduct'
     }],
-    customCss: ['./src/designs/ui.css'],
+    customCss: ['./src/designs/global.css'],
   }), tailwind({
     applyBaseStyles: false,
   })],
