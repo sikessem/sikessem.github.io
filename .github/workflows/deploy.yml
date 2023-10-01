@@ -25,17 +25,19 @@ jobs:
       matrix:
         operating-system: [ubuntu-latest]
         node-version: [18.18]
+        bun-version: [1.0.3]
 
-    name: 🚀 Deploy Node-${{ matrix.node-version }} on ${{ matrix.operating-system }}
+    name: 🚀 Deploy sikessem.github.io to Node-${{ matrix.node-version }} with Bun@${{ matrix.node-version }} on ${{ matrix.operating-system }}
 
     steps:
-      - name: Checkout the repository
+      - name: 🚚 Checkout the repository
         uses: actions/checkout@v3
 
-      - name: Install, build, and upload
+      - name: ⚡️ Install, build, and upload
         uses: withastro/action@v1
         with:
           node-version: ${{ matrix.node-version }}
+          package-manager: bun@${{ matrix.bun-version }}
 
   deploy:
     needs: build
@@ -43,10 +45,10 @@ jobs:
     runs-on: ubuntu-latest
 
     environment:
-      name: github-pages
+      name: 🍱 github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Deploy to GitHub Pages
+      - name: 📂 Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1

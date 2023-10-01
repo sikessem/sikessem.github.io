@@ -2,9 +2,9 @@
   "name": "opensource.sikessem.com",
   "engines": {
     "node": ">=18.18.0",
-    "pnpm": ">=8.0.0"
+    "bun": ">=1.0.0"
   },
-  "packageManager": "pnpm@8.8.0",
+  "packageManager": "bun@1.0.3",
   "publishConfig": {
     "access": "public"
   },
