@@ -1,4 +1,4 @@
 {
-  "extends": "./node_modules/astro/tsconfigs/strict",
+  "extends": "./node_modules/astro/tsconfigs/strictest.json",
   "compilerOptions": {},
 }
