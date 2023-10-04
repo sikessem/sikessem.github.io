@@ -25,9 +25,9 @@ jobs:
       matrix:
         operating-system: [ubuntu-latest]
         node-version: [18.18]
-        bun-version: [1.0.3]
+        bun-version: [1.0.4]
 
-    name: 🚀 Deploy sikessem.github.io to Node-${{ matrix.node-version }} with Bun@${{ matrix.node-version }} on ${{ matrix.operating-system }}
+    name: 🚀 Deploy sikessem.github.io to Node-${{ matrix.node-version }} and build with Bun@${{ matrix.bun-version }} on ${{ matrix.operating-system }}
 
     steps:
       - name: 🚚 Checkout the repository
