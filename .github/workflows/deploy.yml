@@ -25,9 +25,9 @@ jobs:
       matrix:
         operating-system: [ubuntu-latest]
         node-version: [18.18]
-        bun-version: [1.0.4]
+        pnpm-version: [8.8]
 
-    name: 🚀 Deploy sikessem.github.io to Node-${{ matrix.node-version }} and build with Bun@${{ matrix.bun-version }} on ${{ matrix.operating-system }}
+    name: 🚀 Deploy sikessem.github.io to Node-${{ matrix.node-version }} and build with pnpm@${{ matrix.pnpm-version }} on ${{ matrix.operating-system }}
 
     steps:
       - name: 🚚 Checkout the repository
@@ -37,7 +37,7 @@ jobs:
         uses: withastro/action@v1
         with:
           node-version: ${{ matrix.node-version }}
-          package-manager: bun@${{ matrix.bun-version }}
+          package-manager: pnpm@${{ matrix.pnpm-version }}
 
   deploy:
     needs: build
