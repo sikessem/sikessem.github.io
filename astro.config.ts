@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import tailwind from "@astrojs/tailwind";
+import solidJs from "@astrojs/solid-js";
 
 // https://astro.build/config
 export default defineConfig({
@@ -62,8 +63,8 @@ export default defineConfig({
     }],
     customCss: ['./src/designs/global.css'],
   }), tailwind({
-    applyBaseStyles: false,
-  })],
+    applyBaseStyles: false
+  }), solidJs()],
   // Process images with sharp: https://docs.astro.build/en/guides/assets/#using-sharp
   image: {
     service: {
