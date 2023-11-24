@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import qwikdev from "@qwikdev/astro";
 import tailwind from "@astrojs/tailwind";
-import solidJs from "@astrojs/solid-js";
 
 // https://astro.build/config
 export default defineConfig({
@@ -61,10 +61,10 @@ export default defineConfig({
       },
       link: 'code-of-conduct'
     }],
-    customCss: ['./src/designs/global.css'],
+    customCss: ['./src/designs/global.css']
   }), tailwind({
     applyBaseStyles: false
-  }), solidJs()],
+  }), qwikdev()],
   // Process images with sharp: https://docs.astro.build/en/guides/assets/#using-sharp
   image: {
     service: {
