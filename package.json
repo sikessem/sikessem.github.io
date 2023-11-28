@@ -2,9 +2,9 @@
   "name": "opensource.sikessem.com",
   "engines": {
     "node": ">=20.10.0",
-    "pnpm": ">=8.10.0"
+    "pnpm": ">=8.11.0"
   },
-  "packageManager": "pnpm@8.10.5",
+  "packageManager": "pnpm@8.11.0",
   "publishConfig": {
     "access": "public"
   },
@@ -21,12 +21,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.13.0",
+    "@astrojs/starlight": "^0.13.1",
     "@astrojs/starlight-tailwind": "^2.0.1",
     "@astrojs/tailwind": "^5.0.2",
     "@builder.io/qwik": "^1.2.19",
-    "@qwikdev/astro": "^0.2.3",
-    "astro": "^3.6.0",
+    "@qwikdev/astro": "^0.2.5",
+    "astro": "^3.6.2",
     "sharp": "^0.32.6",
     "tailwindcss": "^3.3.5"
   },
