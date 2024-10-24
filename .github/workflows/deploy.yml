@@ -31,10 +31,10 @@ jobs:
 
     steps:
       - name: 🚚 Checkout the repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: ⚡️ Install, build, and upload
-        uses: withastro/action@v1
+        uses: withastro/action@v2
         with:
           node-version: ${{ matrix.node-version }}
           package-manager: pnpm@${{ matrix.pnpm-version }}
@@ -51,4 +51,4 @@ jobs:
     steps:
       - name: 📂 Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
