@@ -30,18 +30,23 @@ export default defineConfig({
       }
     },
     sidebar: [{
-      label: 'Projects',
+      label: 'Starter Kit',
       translations: {
-        fr: 'Projets'
+        fr: 'Kit de démarrage'
       },
-      autogenerate: {
-        directory: 'projects'
-      }
+      link: 'starter'
     }, {
-      label: 'Packages',
-      autogenerate: {
-        directory: 'packages'
-      }
+      label: 'UI Kit',
+      translations: {
+        fr: 'Kit d’interface utilisateur'
+      },
+      link: 'ui'
+    }, {
+      label: 'Skeleton',
+      translations: {
+        fr: 'Squelette'
+      },
+      link: 'skeleton'
     }, {
       label: '🧪 Testing and Debugging',
       translations: {
