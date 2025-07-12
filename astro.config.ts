@@ -18,7 +18,7 @@ export default defineConfig({
     },
     social: {
       github: 'https://github.com/sikessem',
-      twitter: 'https://twitter.com/@SikessemOrg'
+      twitter: 'https://twitter.com/@SikessemHQ'
     },
     locales: {
       root: {
